@@ -1,0 +1,47 @@
+.header {
+   &-main {
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 0;
+   }
+   &-phone {
+      color: $gray;
+      font-weight: 300;
+      a {
+         margin-left: 15px;
+         font-weight: 600;
+      }
+   }
+}
+.navigation {
+   display: flex;
+   align-items: center;
+   gap: 0 60px;
+   .icon-search,
+   .icon-toggle {
+      cursor: pointer;
+   }
+}
+@include maxw(767px) {
+   .header {
+      &-logo {
+         max-width: 120px;
+      }
+      &-phone {
+         display: none;
+      }
+      &-main {
+         padding: 20px 0;
+      }
+   }
+   .navigation {
+      gap: 0 25px;
+      .icon-search {
+         width: 20px;
+      }
+      .icon-toggle {
+         width: 24px;
+      }
+   }
+}
